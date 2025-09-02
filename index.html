@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IGNAFF TE DEGOLLO | Almacén Natural</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="description" content="Dietética - alimentos naturales, orgánicos, sin TACC.">
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+    <div class="container header__wrap">
+     <a class="brand" href="#top"><img src="./imagen-temporal.jpg" alt="IGNAFF TE DEGOLLO" /></a>
+     <nav class="top-links">
+        <a href="#top" class="btn btn--ghost">Inicio</a>
+        <a href="#catalogo" class="btn btn--ghost">Catálogo</a>
+        <a href="#sobre-nosotros" class="btn btn--ghost">Sobre nosotros</a>
+      </nav>
+
+      <form class="search" id="searchForm" autocomplete="off">
+      
+        <input id="searchInput" class="search__input" type="search" placeholder="Buscar productos..." />
+        <button class="btn btn--ghost" type="submit">Buscar</button>
+      </form>
+
+      <button class="cart-toggle" id="openCart" aria-label="Abrir carrito">
+        🛒 <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+    <nav class="nav container" id="mainNav">
+      <!-- Secciones generadas por JS -->
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__wrap">
+      <div>
+        <h1>Alimentos naturales, sanos y ricos</h1>
+        <p>Frutos secos, semillas, sin TACC, suplementos y más. Enviamos en el día.</p>
+        <a href="#catalogo" class="btn btn--primary">Ver catálogo</a>
+      </div>
+      <div class="hero__slider">
+        <button class="slider__btn slider__btn--prev" id="heroPrev" aria-label="Imagen anterior">‹</button>
+        <img id="heroImg" class="hero__img" src="https://images.unsplash.com/photo-1604908554168-3cba4e6b1d43?q=80&w=1200&auto=format&fit=crop" alt="Frutos secos y semillas">
+        <button class="slider__btn slider__btn--next" id="heroNext" aria-label="Imagen siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <main class="container" id="catalogo">
+    <!-- Bloques de categoría generados por JS -->
+  </main>
+
+  <!-- Sobre nosotros -->
+  <section class="section container" id="sobre-nosotros">
+    <div class="section__title">
+      <h2>Sobre nosotros</h2>
+    </div>
+    <p>Somos un almacén natural comprometido con tu bienestar. Ofrecemos productos frescos y de calidad.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <h3>IGNAFF TE DEGOLLO</h3>
+        <p>Almacén natural · Córdoba</p>
+        <small>© <span id="year"></span> Todos los derechos reservados.</small>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul class="list">
+          <li>WhatsApp: <a href="https://wa.me/5493510000000" target="_blank" rel="noopener">+54 9 351 [NÚMERO]</a></li>
+          <li>Instagram: <a href="#" target="_blank" rel="noopener">@ignaff.dietetica</a></li>
+          <li>Dirección: [TU DIRECCIÓN]</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Consumidores</h4>
+             <ul class="list">
+          <li><a href="#">Defensa de las y los consumidores</a></li>
+          <li><a href="#">Botón de arrepentimiento</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carrito (drawer) -->
+  <aside id="cartDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer__panel">
+      <button class="drawer__close" id="closeCart" aria-label="Cerrar carrito">✕</button>
+      <h3>Tu carrito</h3>
+      <div id="cartItems" class="cart__items"></div>
+      <div class="cart__summary">
+        <div class="cart__line"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+        <div class="cart__total"><span>Total</span><span id="cartTotal">$0</span></div>
+          <a id="checkoutBtn" class="btn btn--primary" href="checkout.html">Finalizar compra</a>
+        <small>Pagos seguros vía Mercado Pago • Redirección protegida (HTTPS)</small>
+      </div>
+    </div>
+    <div class="drawer__overlay"></div>
+  </aside>
+
+  <script src="./app.js"></script>
+</body>␊
+</html>␊
