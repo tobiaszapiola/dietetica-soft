@@ -17,7 +17,7 @@ a{color:inherit; text-decoration:none}
 .header{position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,240,245,.8); border-bottom:1px solid var(--border); z-index:50}
 .header__wrap{display:flex; align-items:center; gap:16px; height:64px}
 .brand{display:flex; align-items:center; gap:10px; font-weight:800}
-  .brand__logo{font-size:32px}
+  .brand__logo{font-size:20px}
   .top-links{display:flex; gap:10px}
   .top-links .btn{white-space:nowrap}
   .search{display:flex; gap:8px; margin-left:auto; flex:1; max-width:520px}
@@ -35,12 +35,14 @@ a{color:inherit; text-decoration:none}
   margin-bottom:24px; /* separa el banner de la siguiente sección */
 }
 
-hero{padding:0; border-bottom:1px solid var(--border);}
-.hero__slider{position:relative}
-.hero__img{width:100%; height:95%; object-fit:cover; display:block}
-.slider__btn{position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,.8); border:1px solid var(--border); border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; cursor:pointer}
-.slider__btn--prev{left:8px}
-.slider__btn--next{right:8px}
+.hero{padding:0; border-bottom:1px solid var(--border); height:100vh;}
+.hero__slider{position:relative; height:100%;}
+.hero__img{width:100%; height:100%; object-fit:cover; display:block}
+
+.categories{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; padding:28px 0}
+.cat-tile{position:relative; border-radius:16px; overflow:hidden; display:block}
+.cat-tile img{width:100%; height:100%; object-fit:cover}
+.cat-tile span{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.35); color:#fff; font-weight:700}
 
 .section{padding:28px 0}
 .section__title{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px}
