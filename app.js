@@ -56,6 +56,8 @@ const CATEGORIES = [...new Set(PRODUCTS.map(p => p.categoria))];
 // ====== UI Dinámica ======
 const nav = document.getElementById("mainNav");
 nav.innerHTML = CATEGORIES.map(c => `<a href="#sec-${slug(c)}">${c}</a>`).join("");
+const categoriesEl = document.getElementById("categories");
+categoriesEl.innerHTML = CATEGORIES.map(renderCatTile).join("");
 
 const main = document.getElementById("catalogo");
 main.innerHTML = CATEGORIES.map(cat => renderSection(cat)).join("");
@@ -95,6 +97,16 @@ function renderCard(p){
 function slug(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-")}
 function sanitize(s){return String(s).replace(/[<>&"]/g, x=>({ '<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;' }[x]))}
 function escapeBrackets(s){return String(s).replace(/\[/g,'[').replace(/\]/g,']')}
+function renderCatTile(cat){
+  const img = PRODUCTS.find(p => p.categoria === cat)?.imagen || "";
+  return `
+    <a href="#sec-${slug(cat)}" class="cat-tile">
+      <img src="${img}" alt="${sanitize(cat)}">
+      <span>${cat}</span>
+    </a>
+  `;
+}
+
 
 function parsePrice(val){
   return Number(String(val).replace(/[^0-9,.-]/g,'').replace(',', '.')) || 0;
